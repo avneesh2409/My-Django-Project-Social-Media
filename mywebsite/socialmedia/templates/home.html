@@ -1,0 +1,31 @@
+{% extends 'master.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center"> Student Details </h1>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Contact</th>
+                            <th>Address</th>
+                            <th>Registration Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for student in current_students %}
+                                <tr>
+                                    <th>{{student.name}}</th>
+                                    <th>{{student.age}}</th>
+                                    <th>{{student.contact}}</th>
+                                    <th>{{student.address}}</th>
+                                    <th>{{student.date}}</th>
+                                </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+        </div>
+    </div>
+{% endblock content %}

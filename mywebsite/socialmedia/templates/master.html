@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Home {% endblock title %}</title>
+    {% block head_meta %}
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta http-equiv="Content-Language" value="en-US" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock head_meta %}
+    {% block head_css %}
+            <link href="{% static 'socialmedia/css/bootstrap.min.css' %}" rel="stylesheet" media="screen" />
+            <link href="{% static 'socialmedia/css/style.css' %}" rel="stylesheet" media="screen" />
+    {% endblock head_css %}
+</head>
+<body>
+    <header>
+        <div class="row">
+            <div class="col-md-12">
+             {% block header %}
+            <ul type='none' class="navbar">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'herolist' %}">Hero List</a></li>
+                <li><a href="{% url 'index' %}">Index</a></li>
+            </ul>
+            {% endblock header %}
+            </div>
+        </div>
+    </header>
+        <div class="jumbotron">
+            {% block content %}
+            if you see this, something is wrong!
+        {% endblock content %}
+        </div>
+    <div class="jumbotron">
+        {% block footer %}
+            <p>Copyright CRM Easy</p>
+    {% endblock footer %}
+        </div>
+</body>
+</html>

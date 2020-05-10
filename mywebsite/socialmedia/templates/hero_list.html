@@ -1,0 +1,16 @@
+{% extends 'master.html' %}
+{%  block title %}
+    Hero List View
+{% endblock title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <ul type='none' class="navbar">
+        {% for hero in object_list %}
+            <li class="text-capitalize">{{hero.name}}</li>
+        {% endfor %}
+    </ul>
+    </div>
+</div>
+{% endblock content %}
