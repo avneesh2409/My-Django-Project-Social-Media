@@ -1,6 +1,19 @@
 from django.shortcuts import render,redirect
+from django.http import HttpResponse
 import datetime 
+# import requests
 # Create your views here.
+
+# async def fetchApi(request):
+#     response = requests.get("http://dummy.restapiexample.com/api/v1/employees")
+#     try:
+#         res = await response.json()
+#         return render(request,'fetchApi.html',{
+#             'status':res['status'],
+#             'data':res['data']
+#         })
+#     except :
+#         return redirect('index')
 
 def index(request):
     now = datetime.datetime.now()

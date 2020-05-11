@@ -18,4 +18,5 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('herolist/',HeroList.as_view(),name="herolist"),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # re_path('request/api/',fetchApi,name='fetchApi'),
 ]

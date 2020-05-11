@@ -1,0 +1,15 @@
+{% extends 'master.html' %}
+
+{% block content %}
+{% if success == "success" %}
+        {% for item in data %}
+                <div class="row">
+                    {% for k,v in item.items() %}
+                    <div class="col-md-3">
+                        <strong>{{k}}</strong>
+                        <small>{{v}}</small>
+                    </div>
+                </div>
+        {% endfor %}
+{% endif %}
+{% endblock %}
